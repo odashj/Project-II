@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head> 
+		<link href='https://fonts.googleapis.com/css?family=Merriweather|Montserrat:700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+		<title>MICA Graphic Design</title>
+	</head>
+
+	<body bgcolor="#040603"> 
+	<div class="page">
+			<div class="moveAround">
+				<div class="imgWrap">
+			  <img src="sample_image_01.png" class="float"/>
+			  <h4 class="imgDescription">Nov20.Lorem ipsum delorum sit amet, consecta dipisicing elit.
+			  </h4>
+			</div>
+			
+			</div>
+
+			<div class="open-button">	
+			</div>
+		
+
+			<div class="home-nav">
+							<h1>MICA Graphic Design</h1>
+					<h2><a href="#">Archive</a> <a href="#">Calendar</a> <a href="#">Resources</a> <a href="#">Contribute</a> <a href="#">Twitter</a> <a href="#">Facebook</a> <a href="#">Tumblr</a> <a href="#">Vimeo</a> <a href="#">Behance</a> <a href="#">Flickr</a> <a href="#">GD MFA</a> <a href="#">Post-Bac GD</a> <a href="#">Contact</a> <a href="#">MICA.edu</a> <a href="#">Search</a></h2>
+			</div>
+			<div class="close-button">
+			</div>
+		</div>
+	</div>
+
+
+	</body>
+
+	</html>
+
+	<script>
+$(document).ready(function(){
+    animateDiv();
+    
+});
+
+function makeNewPosition(){
+    
+    // Get viewport dimensions (remove the dimension of the div)
+    var h = $(window).height() - 50;
+    var w = $(window).width() - 50;
+    
+    var nh = Math.floor(Math.random() * h);
+    var nw = Math.floor(Math.random() * w);
+    
+    return [nh,nw];    
+    
+}
+
+function animateDiv(){
+    var newq = makeNewPosition();
+    var oldq = $('.moveAround').offset();
+    var speed = calcSpeed([oldq.top, oldq.left], newq);
+    
+    $('.moveAround').animate({ top: newq[0], left: newq[1] }, speed, function(){
+      animateDiv();        
+    });
+    
+};
+
+function calcSpeed(prev, next) {
+    
+    var x = Math.abs(prev[1] - next[1]);
+    var y = Math.abs(prev[0] - next[0]);
+    
+    var greatest = x > y ? x : y;
+    
+    var speedModifier = 0.1;
+
+    var speed = Math.ceil(greatest/speedModifier);
+
+    return speed;
+
+}
+
+
+</script>
+
