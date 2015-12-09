@@ -5,32 +5,87 @@
 	<head> 
 		<link href='https://fonts.googleapis.com/css?family=Merriweather|Montserrat:700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="css/main.css">
-		<link rel="stylesheet" type="text/css" href="css/main.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
 		<title>MICA Graphic Design</title>
 	</head>
 
-	<body bgcolor="#040603"> 
+	<body class="home" bgcolor="#040603" \> 
 	<div class="page">
+
+			<div class="search-field">
+
+			<div class="toggle search-close">
+			<button class="search-close">
+				&times;
+			</button>
+		</div>
+			<div class="type-search">
+					<h4>
+						search
+						<hr SIZE="4" NOSHADE COLOR="#ffffff">
+					</h4>
+
+			</div>
+		</div>
+
 			<div class="moveAround">
 				<div class="imgWrap">
 			  <img src="sample_image_01.png" class="float"/>
-			  <h4 class="imgDescription">Nov20.Lorem ipsum delorum sit amet, consecta dipisicing elit.
+			  <h4 class="imgDescription"><strong>Nov20.</strong>Lorem ipsum delorum sit amet, consecta dipisicing elit.
 			  </h4>
 			</div>
 			
 			</div>
 
-			<div class="open-button">	
+			<div class="moveAround">
+					<div class="imgWrap">
+				  <img src="sample_image_01.png" class="float"/>
+				  <h4 class="imgDescription"><strong>Nov20.</strong>Lorem ipsum delorum sit amet, consecta dipisicing elit.
+				  </h4>
+				</div>
+
+			</div>
+
+				<div class="moveAround">
+					<div class="imgWrap">
+				  <img src="sample_image_01.png" class="float"/>
+				  <h4 class="imgDescription"><strong>Nov20.</strong>Lorem ipsum delorum sit amet, consecta dipisicing elit.
+				  </h4>
+				</div>
+
+			</div>
+
+				<div class="moveAround">
+					<div class="imgWrap">
+				  <img src="sample_image_01.png" class="float"/>
+				  <h4 class="imgDescription"><strong>Nov20.</strong>Lorem ipsum delorum sit amet, consecta dipisicing elit.
+				  </h4>
+				</div>
+
+			</div>
+
+				<div class="moveAround">
+					<div class="imgWrap">
+				  <img src="sample_image_01.png" class="float"/>
+				  <h4 class="imgDescription"><strong>Nov20.</strong>Lorem ipsum delorum sit amet, consecta dipisicing elit.
+				  </h4>
+				</div>
+
 			</div>
 		
 
 			<div class="home-nav">
-							<h1>MICA Graphic Design</h1>
-					<h2><a href="#">Archive</a> <a href="#">Calendar</a> <a href="#">Resources</a> <a href="#">Contribute</a> <a href="#">Twitter</a> <a href="#">Facebook</a> <a href="#">Tumblr</a> <a href="#">Vimeo</a> <a href="#">Behance</a> <a href="#">Flickr</a> <a href="#">GD MFA</a> <a href="#">Post-Bac GD</a> <a href="#">Contact</a> <a href="#">MICA.edu</a> <a href="#">Search</a></h2>
+							<div class="title">
+					<h2><strong>MICA Graphic Design</strong><br><a href="archive.html">Archive</a>.<a href="calendar.html">Calendar</a>.<a href="resources.html">Resources</a>.<br><button class="home-search"><a href="#">Contribute</a></button>.<a href="https://twitter.com/MICA_GD">Twitter</a>.<a href="http://micagraphicdesign.tumblr.com/">Tumblr</a>.<br><a href="https://vimeo.com/micagd">Vimeo</a>.<a href="http://portfolios.mica.edu/search?mica_major=797&field=&content=projects&sort=&time=week">Behance</a>.<a href="https://www.flickr.com/groups/gdmica">Flickr</a>.<br><a href="http://micadesign.org/">GD MFA</a>.<a href="http://micagraphicdesignpb.org/">Post Bac GD</a>.<a href="mailto:bhorne@mica.edu?Subject=hey%20there%20MICA%20GD" target="_blank">Contact</a>.<br><a href="http://mica.edu">MICA.edu</a>.<button class="home-search"><a href="#">Search</a></button></h2>
+						
+					</div>
 			</div>
-			<div class="close-button">
+
+			<div class="toggle home">	
+				<button class="home">
+					&times;
+				</button>
 			</div>
 		</div>
 	</div>
@@ -42,6 +97,9 @@
 
 	<script>
 $(document).ready(function(){
+	// var ranp = makeNewPosition();
+	// $('.moveAround').eq(0).css({'top': ranp[0], 'left': ranp[1]})
+	setupDiv();
     animateDiv();
     
 });
@@ -60,13 +118,30 @@ function makeNewPosition(){
 }
 
 function animateDiv(){
-    var newq = makeNewPosition();
-    var oldq = $('.moveAround').offset();
-    var speed = calcSpeed([oldq.top, oldq.left], newq);
     
-    $('.moveAround').animate({ top: newq[0], left: newq[1] }, speed, function(){
+    $('.moveAround').each(function(index,elem){ 
+    var newq = makeNewPosition();
+    var oldq = $(elem).offset();
+    var speed = calcSpeed([oldq.top, oldq.left], newq);
+     $(elem).animate({ top: newq[0], left: newq[1] }, speed, function(){
       animateDiv();        
     });
+
+    })
+    
+};
+
+function setupDiv(){
+    
+    $('.moveAround').each(function(index,elem){ 
+    var newq = makeNewPosition();
+    var oldq = $(elem).offset();
+    var speed = calcSpeed([oldq.top, oldq.left], newq);
+	$(elem).css({'top': newq[0], 'left': newq[1]})
+
+    })
+    
+   
     
 };
 
@@ -85,6 +160,38 @@ function calcSpeed(prev, next) {
 
 }
 
+</script>
+
+
+
+
+<script>
+
+$(document).ready(function(){
+    $("button.home").click(function(){
+        $(".home-nav").toggle();
+    });
+});
+
+</script>
+
+<script>
+
+$(document).ready(function(){
+    $("button.home-search").click(function(){
+        $(".search-field").toggle();
+    });
+});
+
+</script>
+
+<script>
+
+$(document).ready(function(){
+    $("button.search-close").click(function(){
+        $(".search-field").toggle();
+    });
+});
 
 </script>
 

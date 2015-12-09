@@ -6,33 +6,46 @@
 		<link href='https://fonts.googleapis.com/css?family=Merriweather|Montserrat:700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 		<link rel="stylesheet" type="text/css" href="css/main.css">
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
 		<title>MICA Graphic Design</title>
 	</head>
 
 	<body bgcolor="#040603"> 
-		<nav>
-  <ul>
-    <li><a href="home.html">MICA GD</a></li>
-    <li><a href="about.html">Archive</a></li>
-    <li><a href="services.html">Calendar</a></li>
-    <li><a href="products.html">Resources</a></li>
-    <li><a href="jobs.html">Contribute</a></li>
+<nav>
+	<ul>
+    <li><a href="index.html">MICA GD</a></li>
+    <li><a href="archive.html">Archive</a></li>
+    <li><a href="calendar.html">Calendar</a></li>
+    <li><a href="resources.html">Resources</a></li>
+    <li><button class="search"><a href="#">Contribute</a></button></li>
   </ul>
 </nav>
 
 <nav class="bottom">
   <ul class="bottom">
-    <li><a href="home.html">GD MFA</a></li>
-    <li><a href="about.html">Post-Bac</a></li>
-    <li><a href="services.html">Contact</li>
-    <li><a href="products.html">MICA.edu</a></li>
-    <li><a href="jobs.html">Search</a></li>
+    <li><a href="http://micadesign.org/">GD MFA</a></li>
+    <li><a href="http://micagraphicdesignpb.org/">Post-Bac</a></li>
+    <li><a href="mailto:bhorne@mica.edu?Subject=hey%20there%20MICA%20GD" target="_blank" title="Contact">Contact</a>
+    </li>
+    <li><a href="http://mica.edu/">MICA.edu</a></li>
+    <li><button class="search"><a href="#">Search</a></button></li>
+  </ul>
+</nav>
+
+<nav class="bottom">
+  <ul class="bottom">
+    <li><a href="http://micadesign.org/">GD MFA</a></li>
+    <li><a href="http://micagraphicdesignpb.org/">Post-Bac</a></li>
+    <li><a href="<a href="mailto:bhorne@mica.edu?Subject=hey%20there%20MICA%20GD" target="_blank" title="Contact">Contact</a>">Contact</li>
+    <li><a href="http://mica.edu/">MICA.edu</a></li>
+    <li><button class="search"><a href="#">Search</a></button></li>
   </ul>
 </nav>
 	
 		<div class="title">
-		<h1>Lorem Ipsum Dolorum.<br>
-		Sep25.Post by Jane Doe</h1>
+		<h2><strong>Lorem Ipsum Dolorum.</strong><br>
+		Sep25.Post by Jane Doe</h2>
 		</div>
 		<img src="sample_image_01.png" class="img-responsive">
 		<div class="text">
@@ -46,6 +59,29 @@
 		</div>
 		<div class="text">
 		<p>Officia neque mauris at eu est in, aliquam rhoncus diam mauris a quam ac. Ornare ultricies dolor pede mollis, metus aliquam, mattis cupiditate, consequatur sed nunc maecenas, amet viverra. Risus ut duis proin metus tincidunt, et elit at volutpat quis, viverra a elit eget, ornare ac ut nibh rutrum in. Quam tellus nec, urna ullamcorper suscipit pretium feugiat in sed, ullamcorper suspendisse et. Est erat, gravida eget ipsum interdum sed eu neque. Ut ornare pede, nulla amet mi elit, enim turpis, ac hendrerit a lobortis in, inceptos eleifend vehicula volutpat sollicitudin. Id duis cum, sollicitudin integer. Lacinia lobortis rhoncus id et. Orci vitae ante. Ut facilisis vitae aptent lectus lacus pellentesque, pellentesque aliquam a, eu quis libero, mauris nonummy vel euismod. Id velit rutrum morbi, eget est ridiculus odio iaculis. </p><p><i>Jane Doe is a junior graphic design major from Ohio</i> 
+						<br>
+		<br>
 		</p> 
+
 		</div>
 	</body>
+
+	<script>
+
+$(document).ready(function(){
+    $("button.search").click(function(){
+        $(".search-field").toggle();
+    });
+});
+
+</script>
+
+<script>
+
+$(document).ready(function(){
+    $("button.search-close").click(function(){
+        $(".search-field").toggle();
+    });
+});
+
+</script>
