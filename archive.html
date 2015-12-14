@@ -9,6 +9,7 @@
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
 		<title>MICA Graphic Design</title>
+		<meta name="viewport" content="width=device-width"/>
 	</head>
 
 	<body bgcolor="#040603"> 
@@ -18,7 +19,7 @@
     <li><a href="archive.html">Archive</a></li>
     <li><a href="calendar.html">Calendar</a></li>
     <li><a href="resources.html">Resources</a></li>
-    <li><button class="search"><a href="#">Contribute</a></button></li>
+    <li><button class="contribute"><a href="#">Contribute</a></button></li>
   </ul>
 </nav>
 
@@ -32,6 +33,44 @@
     <li><button class="search"><a href="#">Search</a></button></li>
   </ul>
 </nav>
+
+<div class="contribute-field">
+
+	<div class="toggle contribute-close">
+		<button class="contribute-close">
+			&times;
+		</button>
+	</div>
+
+	<form class="contribute-form">
+    	<fieldset>
+    	<h1>Contribute</h1>
+	        <div class="pure-control-group">
+	            <label for="name">Name</label>
+	            <input id="name" type="name" placeholder=" ">
+	        </div>
+
+	        <div class="pure-control-group">
+	            <label for="email">Email</label>
+	            <input id="email" type="email" placeholder=" ">
+	        </div>
+
+	        <div class="pure-control-group">
+	            <label for="description">Description</label>
+	            <textarea class="description" placeholder=" "></textarea>
+	        </div>
+			<div class="fileUpload">
+			      <form action="#type your action here" method="POST" enctype="multipart/form-data">
+    <div id="yourBtn" onclick="getFile()">Upload</div>
+    <!-- this is your file input tag, so i hide it!-->
+    <div style='height: 0px;width:0px; overflow:hidden;'><input id="upfile" type="file" value="upload"/></div>
+    <!-- here you can have file submit button or you can write a simple script to upload the file automatically-->
+    <input type="submit" value='Submit' >
+	            
+    	</fieldset>
+	</form>
+</div>
+
 	
 <div class="search-field">
 
@@ -40,130 +79,121 @@
 				&times;
 			</button>
 		</div>
-			<div class="type-search">
-					<h4>
-						search
-						<hr SIZE="4" NOSHADE COLOR="#ffffff">
-					</h4>
-
+						<div class="type-search">
+					<input type="search" id="search" 
+					placeholder=search... name=s autocomplete="off">
 			</div>
 		</div>
-
 		<div class="title">
 		<h2><strong>Archive.</strong>Event Lecture</h2>
 		</div>
 		
-		
-
-		</div>
+		<div class="thumbnails"> 
 				<div class="imgWrapArch">
 				  <img src="sample_image_01.png" class="arch">
-				  <h4 class="imgDescriptionArch"><strong>Nov20.</strong>Lorem ipsum delorum sit amet, consecta dipisicing elit.
-				  </h4>
-				</div>
-
-					<div class="imgWrapArch">
-				  <img src="sample_image_01.png" class="arch">
-				  <h4 class="imgDescriptionArch"><strong>Nov20.</strong>Lorem ipsum delorum sit amet, consecta dipisicing elit.
-				  </h4>
+				  <a href="content.html"><h4 class="imgDescriptionArch"><strong>11.20</strong><BR>Lorem ipsum delorum, lorem ipsum delorum
+				  </h4></a>
 				</div>
 
 				<div class="imgWrapArch">
 				  <img src="sample_image_01.png" class="arch">
-				  <h4 class="imgDescriptionArch"><strong>Nov20.</strong>Lorem ipsum delorum sit amet, consecta dipisicing elit.
-				  </h4>
+				  <a href="content.html"><h4 class="imgDescriptionArch"><strong>11.20</strong><BR>Lorem ipsum delorum, lorem ipsum delorum
+				  </h4></a>
+				</div>
+
+			<div class="imgWrapArch">
+				  <img src="sample_image_01.png" class="arch">
+				  <a href="content.html"><h4 class="imgDescriptionArch"><strong>11.20</strong><BR>Lorem ipsum delorum, lorem ipsum delorum
+				  </h4></a>
+				</div>
+			<div class="imgWrapArch">
+				  <img src="sample_image_01.png" class="arch">
+				  <a href="content.html"><h4 class="imgDescriptionArch"><strong>11.20</strong><BR>Lorem ipsum delorum, lorem ipsum delorum
+				  </h4></a>
 				</div>
 
 				<div class="imgWrapArch">
 				  <img src="sample_image_01.png" class="arch">
-				  <h4 class="imgDescriptionArch"><strong>Nov20.</strong>Lorem ipsum delorum sit amet, consecta dipisicing elit.
-				  </h4>
+				  <a href="content.html"><h4 class="imgDescriptionArch"><strong>11.20</strong><BR>Lorem ipsum delorum, lorem ipsum delorum
+				  </h4></a>
 				</div>
 
-					<div class="imgWrapArch">
+			<div class="imgWrapArch">
 				  <img src="sample_image_01.png" class="arch">
-				  <h4 class="imgDescriptionArch"><strong>Nov20.</strong>Lorem ipsum delorum sit amet, consecta dipisicing elit.
-				  </h4>
+				  <a href="content.html"><h4 class="imgDescriptionArch"><strong>11.20</strong><BR>Lorem ipsum delorum, lorem ipsum delorum
+				  </h4></a>
+				</div>
+
+									<div class="imgWrapArch">
+				  <img src="sample_image_01.png" class="arch">
+				  <a href="content.html"><h4 class="imgDescriptionArch"><strong>11.20</strong><BR>Lorem ipsum delorum, lorem ipsum delorum
+				  </h4></a>
 				</div>
 
 				<div class="imgWrapArch">
 				  <img src="sample_image_01.png" class="arch">
-				  <h4 class="imgDescriptionArch"><strong>Nov20.</strong>Lorem ipsum delorum sit amet, consecta dipisicing elit.
-				  </h4>
+				  <a href="content.html"><h4 class="imgDescriptionArch"><strong>11.20</strong><BR>Lorem ipsum delorum, lorem ipsum delorum
+				  </h4></a>
+				</div>
+
+			<div class="imgWrapArch">
+				  <img src="sample_image_01.png" class="arch">
+				  <a href="content.html"><h4 class="imgDescriptionArch"><strong>11.20</strong><BR>Lorem ipsum delorum, lorem ipsum delorum
+				  </h4></a>
+				</div>
+
+									<div class="imgWrapArch">
+				  <img src="sample_image_01.png" class="arch">
+				  <a href="content.html"><h4 class="imgDescriptionArch"><strong>11.20</strong><BR>Lorem ipsum delorum, lorem ipsum delorum
+				  </h4></a>
 				</div>
 
 				<div class="imgWrapArch">
 				  <img src="sample_image_01.png" class="arch">
-				  <h4 class="imgDescriptionArch"><strong>Nov20.</strong>Lorem ipsum delorum sit amet, consecta dipisicing elit.
-				  </h4>
+				  <a href="content.html"><h4 class="imgDescriptionArch"><strong>11.20</strong><BR>Lorem ipsum delorum, lorem ipsum delorum
+				  </h4></a>
 				</div>
 
-					<div class="imgWrapArch">
+			<div class="imgWrapArch">
 				  <img src="sample_image_01.png" class="arch">
-				  <h4 class="imgDescriptionArch"><strong>Nov20.</strong>Lorem ipsum delorum sit amet, consecta dipisicing elit.
-				  </h4>
+				  <a href="content.html"><h4 class="imgDescriptionArch"><strong>11.20</strong><BR>Lorem ipsum delorum, lorem ipsum delorum
+				  </h4></a>
+				</div>
+
+									<div class="imgWrapArch">
+				  <img src="sample_image_01.png" class="arch">
+				  <a href="content.html"><h4 class="imgDescriptionArch"><strong>11.20</strong><BR>Lorem ipsum delorum, lorem ipsum delorum
+				  </h4></a>
 				</div>
 
 				<div class="imgWrapArch">
 				  <img src="sample_image_01.png" class="arch">
-				  <h4 class="imgDescriptionArch"><strong>Nov20.</strong>Lorem ipsum delorum sit amet, consecta dipisicing elit.
-				  </h4>
+				  <a href="content.html"><h4 class="imgDescriptionArch"><strong>11.20</strong><BR>Lorem ipsum delorum, lorem ipsum delorum
+				  </h4></a>
+				</div>
+
+			<div class="imgWrapArch">
+				  <img src="sample_image_01.png" class="arch">
+				  <a href="content.html"><h4 class="imgDescriptionArch"><strong>11.20</strong><BR>Lorem ipsum delorum, lorem ipsum delorum
+				  </h4></a>
+				</div>
+				<div class="imgWrapArch">
+				  <img src="sample_image_01.png" class="arch">
+				  <a href="content.html"><h4 class="imgDescriptionArch"><strong>11.20</strong><BR>Lorem ipsum delorum, lorem ipsum delorum
+				  </h4></a>
 				</div>
 
 				<div class="imgWrapArch">
 				  <img src="sample_image_01.png" class="arch">
-				  <h4 class="imgDescriptionArch"><strong>Nov20.</strong>Lorem ipsum delorum sit amet, consecta dipisicing elit.
-				  </h4>
+				  <a href="content.html"><h4 class="imgDescriptionArch"><strong>11.20</strong><BR>Lorem ipsum delorum, lorem ipsum delorum
+				  </h4></a>
 				</div>
 
-					<div class="imgWrapArch">
+			<div class="imgWrapArch">
 				  <img src="sample_image_01.png" class="arch">
-				  <h4 class="imgDescriptionArch"><strong>Nov20.</strong>Lorem ipsum delorum sit amet, consecta dipisicing elit.
-				  </h4>
+				  <a href="content.html"><h4 class="imgDescriptionArch"><strong>11.20</strong><BR>Lorem ipsum delorum, lorem ipsum delorum
+				  </h4></a>
 				</div>
-
-				<div class="imgWrapArch">
-				  <img src="sample_image_01.png" class="arch">
-				  <h4 class="imgDescriptionArch"><strong>Nov20.</strong>Lorem ipsum delorum sit amet, consecta dipisicing elit.
-				  </h4>
-				</div>
-
-				<div class="imgWrapArch">
-				  <img src="sample_image_01.png" class="arch">
-				  <h4 class="imgDescriptionArch"><strong>Nov20.</strong>Lorem ipsum delorum sit amet, consecta dipisicing elit.
-				  </h4>
-				</div>
-
-					<div class="imgWrapArch">
-				  <img src="sample_image_01.png" class="arch">
-				  <h4 class="imgDescriptionArch"><strong>Nov20.</strong>Lorem ipsum delorum sit amet, consecta dipisicing elit.
-				  </h4>
-				</div>
-
-				<div class="imgWrapArch">
-				  <img src="sample_image_01.png" class="arch">
-				  <h4 class="imgDescriptionArch"><strong>Nov20.</strong>Lorem ipsum delorum sit amet, consecta dipisicing elit.
-				  </h4>
-				</div>
-
-				<div class="imgWrapArch">
-				  <img src="sample_image_01.png" class="arch">
-				  <h4 class="imgDescriptionArch"><strong>Nov20.</strong>Lorem ipsum delorum sit amet, consecta dipisicing elit.
-				  </h4>
-				</div>
-
-					<div class="imgWrapArch">
-				  <img src="sample_image_01.png" class="arch">
-				  <h4 class="imgDescriptionArch"><strong>Nov20.</strong>Lorem ipsum delorum sit amet, consecta dipisicing elit.
-				  </h4>
-				</div>
-
-				<div class="imgWrapArch">
-				  <img src="sample_image_01.png" class="arch">
-				  <h4 class="imgDescriptionArch"><strong>Nov20.</strong>Lorem ipsum delorum sit amet, consecta dipisicing elit.
-				  </h4>
-				</div>
-
 			</div>
 
 			</html>
@@ -185,6 +215,26 @@ $(document).ready(function(){
 $(document).ready(function(){
     $("button.search-close").click(function(){
         $(".search-field").toggle();
+    });
+});
+
+</script>
+
+<script>
+
+$(document).ready(function(){
+    $("button.contribute").click(function(){
+        $(".contribute-field").toggle();
+    });
+});
+
+</script>
+
+<script>
+
+$(document).ready(function(){
+    $("button.contribute-close").click(function(){
+        $(".contribute-field").toggle();
     });
 });
 
